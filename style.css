@@ -1,0 +1,160 @@
+
+html{
+    scroll-behavior: smooth scroll;
+}
+/* Reset default margin and padding for all elements */
+body, h1, h2, h3, p, button, div {
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the .cources div horizontally and vertically */
+body {
+    /* scroll-behavior: smooth; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* background-color: #f0f0f0; */
+    background: linear-gradient(to bottom right, rgb(148, 233, 148), rgb(92, 178, 222));
+
+}
+
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Style for the .card container */
+.cources {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px; /* Set a maximum width for the cards container */
+    width: 100%;
+    margin: 20px;
+    box-sizing: border-box;
+    padding-top: 60px;
+}
+
+/* Style for individual .card */
+.card {
+    width: calc(33.33% - 20px); /* Adjust the card width and spacing as needed */
+    margin: 10px;
+    background: linear-gradient(to bottom right, rgb(196, 233, 196), rgb(184, 184, 219));
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.card:hover{
+    /* font-size: large; */
+    transform: translate(10px, 10px);}
+
+/* Other card styling... */
+.cardImg img {
+    width:10.2cm ;
+    height: 8cm;
+}
+
+.cardInfo {
+    padding: 15px;
+}
+h2{
+    padding: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1rem;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+
+/* form styling */
+.form-container {
+    width: 500px;
+    margin: auto;
+    margin-top: 20px; /* Add margin to create space below the .cources */
+    background: linear-gradient(to bottom right, rgb(196, 233, 196), rgb(184, 184, 219));
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+}
+.form-container:hover{
+    transform: translate(10px, 10px);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form select {
+    width: 95%;
+    padding: 10px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    display: block;
+    width: 20%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .form-container {
+        max-width: 90%;
+    }
+}
+
+/* timer style  */
+.countdown {
+    text-align: center;
+    font-size: 24px;
+}
+
+.timer {
+    display: inline-block;
+    border: 2px solid #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}

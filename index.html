@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakopin-LID</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="logo">
+        <h1>Zakopin-LID</h1>
+    </div>
+    <div class="cources">
+        <div class="card">
+            <div class="cardImg">
+                <img src="./webdev.jpg" alt="web dev" srcset="">
+            </div>
+            <div class="cardInfo">
+                <h2>Web Development</h2>
+                <p>Web Dev Simplified is all about teaching web development skills
+                     and techniques in an efficient and practical manner. If you are just getting started in web</p>
+                     <button> <a href="#form-container">Register Now</a></button>
+                     <div class="countdown">
+                        <div class="timer">
+                            <span>Get Regisiter by</span>
+                            <span id="days">00</span> Days
+                            <span id="hours">00</span> Hours
+                            <span id="minutes">00</span> Min
+                            <span id="seconds">00</span>sec
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cardImg">
+                <img src="./data.webp" alt="web dev" srcset="">
+            </div>
+            <div class="cardInfo">
+                <h2>Data Science</h2>
+                <p>Web Dev Simplified is all about teaching web development skills
+                     and techniques in an efficient and practical manner. If you are just getting started in web</p>
+                     <button><a href="#form-container">Register Now</a></button>
+                     <div class="countdown">
+                        <div class="timer">
+                            <span>Get Regisiter by</span>
+                            <span id="days">00</span> Days
+                            <span id="hours">00</span> Hours
+                            <span id="minutes">00</span> Min
+                            <span id="seconds">00</span>sec
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cardImg">
+                <img src="./app.jpg" alt="web dev" srcset="">
+            </div>
+            <div class="cardInfo">
+                <h2>App Development</h2>
+                <p>Web Dev Simplified is all about teaching web development skills
+                     and techniques in an efficient and practical manner. If you are just getting started in web</p>
+                     <button><a href="#form-container">Register Now</a></button>
+                     <div class="countdown">
+                        <div class="timer">
+                            <span>Get Regisiter by</span>
+                            <span id="days">00</span> Days
+                            <span id="hours">00</span> Hours
+                            <span id="minutes">00</span> Min
+                            <span id="seconds">00</span>sec
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cardImg">
+                <img src="./coming-soon.jpg" alt="web dev" srcset="">
+            </div>
+            <div class="cardInfo">
+                <h2>Comming Soon</h2>
+                <p>Web Dev Simplified is all about teaching web development skills
+                     and techniques in an efficient and practical manner. If you are just getting started in web</p>
+            </div>
+        </div>
+        <div class="form-container" id="form-container">
+            <h2>Register Here</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="interest">Interest:</label>
+                <select id="interest" name="interest" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="webdev">Web Development</option>
+                    <option value="appdev">App Development</option>
+                    <option value="datascience">Data Science</option>
+                </select>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>document.addEventListener("DOMContentLoaded", () => {
+        const endDate = new Date("2023-08-31T18:00:00").getTime(); // Replace with your desired end date and time
+    
+        const countdownInterval = setInterval(updateCountdown, 1000);
+    
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = endDate - now;
+    
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval);
+                document.querySelector(".timer").innerHTML = "Countdown expired!";
+                return;
+            }
+    
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    
+            document.getElementById("days").textContent = formatTime(days);
+            document.getElementById("hours").textContent = formatTime(hours);
+            document.getElementById("minutes").textContent = formatTime(minutes);
+            document.getElementById("seconds").textContent = formatTime(seconds);
+        }
+    
+        function formatTime(time) {
+            return time < 10 ? "0" + time : time;
+        }
+    
+        updateCountdown();
+        
+    });
+    </script>
+</body>
+</html>
